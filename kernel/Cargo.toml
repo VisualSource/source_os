@@ -1,0 +1,21 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossbeam-queue={ version = "0.3.8", default-features = false, features = ["alloc"]}
+futures-util = { version = "0.3.28", default-features = false, features = ["alloc"]}
+lazy_static = { version = "1.0", features = ["spin_no_std"]}
+pc-keyboard = "0.7.0"
+linked_list_allocator = "0.10.5"
+bootloader_api = "0.11.4"
+x86_64 = "0.14.11"
+pic8259 = "0.10.4"
+uart_16550 = "0.3.0"
+conquer-once = { version = "0.4.0", default-features = false}
+spin = "0.9.8"
+acpi={ version = "5.0.0", default-features = false, features = ["alloc"]}
+noto-sans-mono-bitmap = { version = "0.2.0", default-features = false, features = ["regular","size_16","unicode-basic-latin", "unicode-specials"]}
